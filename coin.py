@@ -7,6 +7,11 @@ class Coin:
     def __init__(self, quantity: float):
         self.quantity = quantity
 
+    def __str__(self) -> str:
+        return f'{self.coin_name}({self.quantity:.6f})'
+
+    __repr__ = __str__
+
 
 class BTC(Coin):
     coin_name = "BTC"
